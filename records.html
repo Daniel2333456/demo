@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Account Records - Dream Drama</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body data-page="records">
+<div class="app-shell">
+    <header class="page-header">
+        <a class="round-button" href="profile.html">←</a>
+        <div class="header-copy"><p>WALLET</p><h1>Account Records</h1></div>
+    </header>
+    <main>
+        <section class="record-tabs">
+            <button type="button" data-record-tab="recharge">Recharge record</button>
+            <button type="button" data-record-tab="consumption">Consumption record</button>
+        </section>
+        <section class="record-list" id="recordList"></section>
+        <section class="empty-state hidden" id="recordsEmpty">
+            <div>◌</div><h2>No records found</h2><p>Simulated recharge and unlock transactions will appear here.</p>
+        </section>
+    </main>
+    <nav class="bottom-nav">
+        <a class="nav-link" href="Home.html"><span>⌂</span><small>Home</small></a>
+        <a class="nav-link" href="discover.html"><span>◉</span><small>Discover</small></a>
+        <a class="nav-link" href="favorites.html"><span>☆</span><small>Saved</small></a>
+        <a class="nav-link active" href="profile.html"><span>♙</span><small>Profile</small></a>
+    </nav>
+</div>
+<div class="toast" id="globalToast"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Likes - Dream Drama</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body data-page="collection" data-collection="likes">
+<div class="app-shell">
+    <header class="page-header">
+        <a class="round-button" href="profile.html">←</a>
+        <div class="header-copy"><p>YOUR LIBRARY</p><h1>Liked</h1></div>
+        <button class="text-action" id="clearCollection" type="button">Clear</button>
+    </header>
+    <main>
+        <section class="empty-state hidden" id="collectionEmpty">
+            <div>♡</div><h2>No liked dramas</h2><p>Tap Like beside a video to add it here.</p>
+            <a class="primary-link" href="discover.html">Discover dramas</a>
+        </section>
+        <section class="section-heading compact-heading" id="collectionHeading">
+            <div><p class="section-kicker">LIKED</p><h2>Your dramas</h2></div>
+            <span id="collectionCount">0 items</span>
+        </section>
+        <section class="poster-grid" id="collectionGrid"></section>
+    </main>
+    <nav class="bottom-nav">
+        <a class="nav-link" href="index.html"><span>⌂</span><small>Home</small></a>
+        <a class="nav-link" href="discover.html"><span>◉</span><small>Discover</small></a>
+        <a class="nav-link" href="favorites.html"><span>☆</span><small>Saved</small></a>
+        <a class="nav-link active" href="profile.html"><span>♙</span><small>Profile</small></a>
+    </nav>
+</div>
+<div class="toast" id="globalToast"></div>
+</body>
+</html>

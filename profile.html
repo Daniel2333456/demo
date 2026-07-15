@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Personal Center - Dream Drama</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body data-page="profile">
+<div class="app-shell">
+    <header class="page-header profile-header">
+        <a class="round-button" href="index.html" aria-label="Back to home">←</a>
+        <div class="header-copy"><p>ACCOUNT</p><h1>Personal Center</h1></div>
+        <button class="mini-coin-button" id="profileShopButton" type="button">🪙 <span id="headerBalance">0</span></button>
+    </header>
+
+    <main class="profile-content">
+        <section class="profile-identity">
+            <div class="profile-avatar" id="profileAvatar">G</div>
+            <div>
+                <h2 id="profileName">Guest User</h2>
+                <p id="profileId">tourist00000</p>
+            </div>
+        </section>
+
+        <button class="balance-card" id="balanceCard" type="button">
+            <span class="balance-icon">✦</span>
+            <span><small>Balance</small><strong><span id="profileBalance">0</span> coins</strong></span>
+            <span>›</span>
+        </button>
+
+        <section class="profile-menu" id="profileMenu">
+            <button type="button" data-profile-action="link-email"><span>✉</span><b>Link an email</b><i>›</i></button>
+            <a href="favorites.html"><span>☆</span><b>Save</b><i>›</i></a>
+            <a href="likes.html"><span>♡</span><b>Like</b><i>›</i></a>
+            <a href="history.html"><span>▣</span><b>Watch history</b><i>›</i></a>
+            <a href="records.html?tab=recharge"><span>✦</span><b>Recharge record</b><i>›</i></a>
+            <a href="records.html?tab=consumption"><span>◉</span><b>Consumption record</b><i>›</i></a>
+            <button type="button" data-profile-action="feedback"><span>?</span><b>Feedback</b><i>›</i></button>
+            <button type="button" data-profile-action="contact"><span>☎</span><b>Contact Us</b><i>›</i></button>
+        </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html"><span>⌂</span><small>Home</small></a>
+        <a class="nav-link" href="discover.html"><span>◉</span><small>Discover</small></a>
+        <a class="nav-link" href="favorites.html"><span>☆</span><small>Saved</small></a>
+        <a class="nav-link active" href="profile.html"><span>♙</span><small>Profile</small></a>
+    </nav>
+</div>
+
+<div class="modal-backdrop hidden" id="profileModal" aria-hidden="true">
+    <section class="modal-card">
+        <button class="modal-close" data-close-modal="profileModal" type="button">×</button>
+        <p class="modal-kicker" id="profileModalKicker">ACCOUNT</p>
+        <h2 id="profileModalTitle">Link an email</h2>
+        <p id="profileModalText">This information is saved only in this browser.</p>
+        <form id="profileModalForm" class="stack-form">
+            <label id="profileNameLabel"><span>Display name</span><input id="profileModalName" type="text" maxlength="30" placeholder="Guest User"></label>
+            <label id="profileEmailLabel"><span>Email</span><input id="profileModalEmail" type="email" placeholder="name@example.com"></label>
+            <label class="hidden" id="profileMessageLabel"><span>Message</span><textarea id="profileModalMessage" rows="5" placeholder="Write your message..."></textarea></label>
+            <button class="primary-button" type="submit" id="profileModalSubmit">Save</button>
+        </form>
+    </section>
+</div>
+
+<div class="modal-backdrop hidden" id="walletModal" aria-hidden="true">
+    <section class="modal-card wallet-card">
+        <button class="modal-close" data-close-modal="walletModal" type="button">×</button>
+        <p class="modal-kicker">COIN SHOP</p>
+        <h2>Recharge balance</h2>
+        <div class="current-balance">Current balance <strong><span id="walletBalance">0</span> coins</strong></div>
+        <div class="coin-pack-grid" id="coinPackGrid"></div>
+        <p class="fine-print">Payments are simulated. No real transaction is performed.</p>
+    </section>
+</div>
+
+<div class="toast" id="globalToast" role="status" aria-live="polite"></div>
+</body>
+</html>

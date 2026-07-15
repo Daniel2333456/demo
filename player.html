@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Watch - Dream Drama</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body data-page="player" class="player-body">
+<div class="video-app">
+    <video id="videoPlayer" class="vertical-video" playsinline preload="metadata"></video>
+    <div class="video-shade"></div>
+
+    <header class="video-topbar">
+        <button class="transparent-icon" id="playerBack" type="button" aria-label="Go back">←</button>
+        <strong id="topEpisodeLabel">Episode 1</strong>
+        <button class="shop-button" id="openWalletButton" type="button">Shop</button>
+    </header>
+
+    <button class="center-play" id="centerPlay" type="button" aria-label="Play video">▶</button>
+
+    <aside class="action-rail" aria-label="Video actions">
+        <button class="rail-action" id="muteButton" type="button"><span id="muteIcon">🔊</span><small>Mute</small></button>
+        <button class="rail-action" id="saveButton" type="button"><span id="saveIcon">☆</span><small>Save</small></button>
+        <button class="rail-action" id="likeButton" type="button"><span id="likeIcon">♡</span><small>Like</small></button>
+        <button class="rail-action" id="episodeDrawerButton" type="button"><span>▣</span><small id="episodeRailLabel">Ep.1</small></button>
+        <button class="rail-action" id="moreButton" type="button"><span>•••</span><small>More</small></button>
+    </aside>
+
+    <section class="video-meta">
+        <h1 id="videoTitle">Loading...</h1>
+        <div class="inline-tags" id="videoTags"></div>
+        <p id="videoEpisodeTitle"></p>
+        <button class="episode-summary-button" id="episodeSummaryButton" type="button">
+            <span id="episodeSummaryText">Episode 1</span>
+            <span>⌄</span>
+        </button>
+    </section>
+
+    <section class="custom-progress">
+        <input id="progressRange" type="range" min="0" max="100" value="0" aria-label="Video progress">
+        <button id="speedButton" type="button">1×</button>
+    </section>
+</div>
+
+<div class="sheet-backdrop hidden" id="episodeSheetBackdrop"></div>
+<section class="bottom-sheet hidden" id="episodeSheet" aria-hidden="true">
+    <div class="sheet-handle"></div>
+    <div class="sheet-heading">
+        <div>
+            <p>EPISODE LIST</p>
+            <h2 id="sheetDramaTitle">Drama</h2>
+        </div>
+        <button class="round-button" id="closeEpisodeSheet" type="button">×</button>
+    </div>
+    <div class="episode-grid" id="episodeGrid"></div>
+</section>
+
+<section class="bottom-sheet hidden" id="moreSheet" aria-hidden="true">
+    <div class="sheet-handle"></div>
+    <div class="sheet-heading">
+        <div>
+            <p>MORE OPTIONS</p>
+            <h2>Episode actions</h2>
+        </div>
+        <button class="round-button" id="closeMoreSheet" type="button">×</button>
+    </div>
+    <div class="sheet-menu">
+        <button id="shareEpisodeButton" type="button"><span>↗</span><span>Share episode</span><b>›</b></button>
+        <button id="copyLinkButton" type="button"><span>⧉</span><span>Copy link</span><b>›</b></button>
+        <button id="reportButton" type="button"><span>!</span><span>Report content</span><b>›</b></button>
+    </div>
+</section>
+
+<div class="modal-backdrop hidden" id="unlockModal" aria-hidden="true">
+    <section class="modal-card unlock-card">
+        <button class="modal-close" data-close-modal="unlockModal" type="button">×</button>
+        <div class="lock-orbit">🔒</div>
+        <p class="modal-kicker">PREMIUM EPISODE</p>
+        <h2>UNLOCK</h2>
+        <p>Unlock this episode and continue watching without interruption.</p>
+        <div class="unlock-price"><span>Episode cost</span><strong><span id="unlockCost">10</span> coins</strong></div>
+        <div class="two-button-row">
+            <button class="secondary-button" id="loginFromUnlock" type="button">Log In</button>
+            <button class="primary-button" id="unlockNowButton" type="button">Unlock Now</button>
+        </div>
+    </section>
+</div>
+
+<div class="modal-backdrop hidden" id="loginModal" aria-hidden="true">
+    <section class="modal-card">
+        <button class="modal-close" data-close-modal="loginModal" type="button">×</button>
+        <p class="modal-kicker">ACCOUNT DEMO</p>
+        <h2>Link an email</h2>
+        <p>This is a front-end simulation. The account is saved only in this browser.</p>
+        <form id="loginForm" class="stack-form">
+            <label><span>Email</span><input id="loginEmail" type="email" required placeholder="name@example.com"></label>
+            <label><span>Display name</span><input id="loginName" type="text" maxlength="30" placeholder="Guest User"></label>
+            <button class="primary-button" type="submit">Continue</button>
+        </form>
+    </section>
+</div>
+
+<div class="modal-backdrop hidden" id="walletModal" aria-hidden="true">
+    <section class="modal-card wallet-card">
+        <button class="modal-close" data-close-modal="walletModal" type="button">×</button>
+        <p class="modal-kicker">COIN SHOP</p>
+        <h2>Recharge balance</h2>
+        <div class="current-balance">Current balance <strong><span id="walletBalance">0</span> coins</strong></div>
+        <div class="coin-pack-grid" id="coinPackGrid"></div>
+        <p class="fine-print">Payments are simulated. No real transaction is performed.</p>
+    </section>
+</div>
+
+<div class="toast" id="globalToast" role="status" aria-live="polite"></div>
+</body>
+</html>

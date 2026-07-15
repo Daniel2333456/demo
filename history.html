@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Watch History - Dream Drama</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body data-page="history">
+<div class="app-shell">
+    <header class="page-header">
+        <a class="round-button" href="profile.html">←</a>
+        <div class="header-copy"><p>RECENT ACTIVITY</p><h1>Watch History</h1></div>
+        <button class="text-action" id="clearHistory" type="button">Clear</button>
+    </header>
+    <main>
+        <section class="empty-state hidden" id="historyEmpty">
+            <div>▣</div><h2>No watch history</h2><p>Episodes you open will appear here.</p>
+            <a class="primary-link" href="discover.html">Start watching</a>
+        </section>
+        <section class="history-feed" id="historyFeed"></section>
+    </main>
+    <nav class="bottom-nav">
+        <a class="nav-link" href="index.html"><span>⌂</span><small>Home</small></a>
+        <a class="nav-link" href="discover.html"><span>◉</span><small>Discover</small></a>
+        <a class="nav-link" href="favorites.html"><span>☆</span><small>Saved</small></a>
+        <a class="nav-link active" href="profile.html"><span>♙</span><small>Profile</small></a>
+    </nav>
+</div>
+<div class="toast" id="globalToast"></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Discover - Dream Drama</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body data-page="discover">
+<div class="app-shell">
+    <header class="page-header">
+        <a class="round-button" href="Home.html" aria-label="Back to home">←</a>
+        <div class="header-copy">
+            <p>EXPLORE</p>
+            <h1>Discover</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="filter-card">
+            <label class="search-field" for="discoverSearch">
+                <span>⌕</span>
+                <input id="discoverSearch" type="search" placeholder="Search title, genre or story ..." autocomplete="off">
+            </label>
+
+            <div class="select-grid">
+                <label>
+                    <span>Type</span>
+                    <select id="typeFilter">
+                        <option value="all">All types</option>
+                        <option value="short-drama">Short drama</option>
+                        <option value="interactive">Interactive</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Genre</span>
+                    <select id="genreFilter">
+                        <option value="all">All genres</option>
+                    </select>
+                </label>
+            </div>
+        </section>
+
+        <section class="section-heading compact-heading">
+            <div>
+                <p class="section-kicker">LIBRARY</p>
+                <h2>All Dramas</h2>
+            </div>
+            <span id="discoverCount">0 results</span>
+        </section>
+
+        <section class="poster-grid" id="discoverGrid" aria-live="polite"></section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html"><span>⌂</span><small>Home</small></a>
+        <a class="nav-link active" href="discover.html"><span>◉</span><small>Discover</small></a>
+        <a class="nav-link" href="favorites.html"><span>☆</span><small>Saved</small></a>
+        <a class="nav-link" href="profile.html"><span>♙</span><small>Profile</small></a>
+    </nav>
+</div>
+<div class="toast" id="globalToast" role="status" aria-live="polite"></div>
+</body>
+</html>
