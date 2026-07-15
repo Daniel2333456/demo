@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch - Dream Reel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body data-page="player">
+<div class="app">
+
+    <header class="page-header player-page-header">
+        <button class="icon-button" id="backButton" type="button" aria-label="Go back">←</button>
+        <div class="header-title-wrap">
+            <p class="eyebrow">NOW PLAYING</p>
+            <h1 id="playerHeaderTitle">Drama</h1>
+        </div>
+    </header>
+
+    <main class="player-layout">
+        <section class="video-panel">
+            <div class="video-container">
+                <video
+                    id="videoPlayer"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+                    Your browser does not support video playback.
+                </video>
+            </div>
+
+            <div class="player-controls">
+                <button class="secondary-button" id="previousEpisode" type="button">
+                    ← Previous
+                </button>
+
+                <button class="secondary-button" id="nextEpisode" type="button">
+                    Next →
+                </button>
+            </div>
+        </section>
+
+        <section class="player-side-panel">
+            <div class="player-information">
+                <div class="player-title-row">
+                    <div>
+                        <p class="eyebrow" id="playerGenres">DRAMA</p>
+                        <h2 id="dramaTitle">Loading...</h2>
+                    </div>
+
+                    <button class="round-action-button" id="favoriteButton" type="button" aria-label="Add to favorites">
+                        ♡
+                    </button>
+                </div>
+
+                <p class="episode-heading" id="episodeTitle"></p>
+                <p class="description" id="dramaDescription"></p>
+
+                <div class="action-row">
+                    <button class="primary-button" id="shareButton" type="button">
+                        Share this episode
+                    </button>
+                </div>
+            </div>
+
+            <section class="episode-section">
+                <div class="section-header compact">
+                    <h3>Episodes</h3>
+                    <span id="episodeCount"></span>
+                </div>
+
+                <div class="episode-list" id="episodeList"></div>
+            </section>
+        </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+        <a class="nav-item" href="Home.html">
+            <span class="nav-icon">⌂</span>
+            <span>Home</span>
+        </a>
+
+        <a class="nav-item" href="discover.html">
+            <span class="nav-icon">◉</span>
+            <span>Discover</span>
+        </a>
+
+        <a class="nav-item" href="favorites.html">
+            <span class="nav-icon">♡</span>
+            <span>Favorites</span>
+        </a>
+
+        <a class="nav-item" href="profile.html">
+            <span class="nav-icon">♙</span>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+</div>
+</body>
+</html>

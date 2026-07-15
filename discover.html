@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - Dream Reel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body data-page="discover">
+<div class="app">
+
+    <header class="page-header">
+        <a class="back-link" href="Home.html" aria-label="Back to home">←</a>
+        <div>
+            <p class="eyebrow">DREAM REEL</p>
+            <h1>Discover</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="filter-panel">
+            <label class="search-box" for="discoverSearch">
+                <span class="search-icon">⌕</span>
+                <input
+                    id="discoverSearch"
+                    type="search"
+                    placeholder="Search title, genre or description..."
+                    autocomplete="off"
+                >
+            </label>
+
+            <div class="filter-row">
+                <label>
+                    <span>Type</span>
+                    <select id="typeFilter">
+                        <option value="all">All types</option>
+                        <option value="short-drama">Short drama</option>
+                        <option value="interactive">Interactive</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span>Genre</span>
+                    <select id="genreFilter">
+                        <option value="all">All genres</option>
+                    </select>
+                </label>
+            </div>
+        </section>
+
+        <section class="section-header">
+            <h2>All Dramas</h2>
+            <span class="result-count" id="discoverCount">0 results</span>
+        </section>
+
+        <section class="drama-grid" id="discoverGrid" aria-live="polite"></section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+        <a class="nav-item" href="Home.html">
+            <span class="nav-icon">⌂</span>
+            <span>Home</span>
+        </a>
+
+        <a class="nav-item active" href="discover.html">
+            <span class="nav-icon">◉</span>
+            <span>Discover</span>
+        </a>
+
+        <a class="nav-item" href="favorites.html">
+            <span class="nav-icon">♡</span>
+            <span>Favorites</span>
+        </a>
+
+        <a class="nav-item" href="profile.html">
+            <span class="nav-icon">♙</span>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+</div>
+</body>
+</html>
